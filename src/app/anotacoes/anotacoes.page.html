@@ -9,21 +9,32 @@
   <ion-card>
     <ion-card-header>
       <ion-item>
-        <ion-input label="Stacked label" labelPlacement="stacked" placeholder="Título" style="overflow: hidden;"></ion-input>
+        <ion-input placeholder="Título" style="overflow: hidden;"></ion-input>
       </ion-item>
     </ion-card-header>
   <ion-item>
-    <ion-input label="Default input"></ion-input>
+    <ion-input><h1></h1></ion-input>
   </ion-item>
+
+  <div class="form-group ion-text-center">
+    <textarea class="form-control" rows="5" id="texto"></textarea>
+  </div>
+
+
+
+
+    <textarea></textarea>
+
+
   </ion-card>
 
 </ion-content>
 
 <div>
 <div class="divisao">
-    <ion-button expand="full">Cancelar</ion-button>
+  <a href="/folder" style="text-decoration: none"><ion-button expand="full" >Cancelar</ion-button></a>
 </div>
 <div class="divisao1">
-    <ion-button slot="start" expand="full" routerLink="/folder">Salvar</ion-button>
+    <ion-button slot="start" expand="full">Salvar</ion-button>
 </div>
 </div>
