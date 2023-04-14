@@ -36,11 +36,12 @@ export class AnotacoesPage implements OnInit {
   async salvarAnotacao() {
     if(this.formAnotacoes.valid){
       this.texAnot.titulo = this.formAnotacoes.value.titulo;
-----------------------------------------------------
-      this.route.navigateByUrl('/tabs/tab1');
+      this.texAnot.texto = this.formAnotacoes.value.texto;
+      await this.storageService.set(this.texAnot.titulo, this.texAnot);
+      this.route.navigateByUrl('/folder/Inbox');
     }else{
-      alert('Formulário Inválido!');
+      alert('Você não adicionou nada!!');
     }
-    }
+  }
 
 }

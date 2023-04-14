@@ -6,13 +6,23 @@
 
 <ion-content>
 
+  <form [formGroup]="formAnotacoes">
+
     <ion-card-header>
       <ion-item>
-        <ion-input placeholder="Título" style="overflow: hidden;"></ion-input>
+        <ion-input formControlName="titulo" placeholder="Título" style="overflow: hidden;"></ion-input>
+        <ng-container *ngFor="let erro of mensagens.titulo">
+          <span class="msg-erro"
+          *ngIf="formAnotacoes.get('titulo').hasError(erro.tipo) && (formAnotacoes.get('titulo').dirty || formAnotacoes.get('titulo').touched)">
+            {{erro.mensagem}}
+          </span>
+        </ng-container>
       </ion-item>
     </ion-card-header>
 
     <textarea placeholder="Escreva seu texto"></textarea>
+
+  </form>
 
 </ion-content>
 
